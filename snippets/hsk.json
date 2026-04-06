@@ -1,0 +1,407 @@
+{
+  "unit command": {
+    "prefix": "unitcmd",
+    "body": [
+      "unit command ${1:name} {",
+      "    command run {",
+      "        ${2:// code}",
+      "    }",
+      "}"
+    ],
+    "description": "HSK unit command template"
+  },
+
+  "unit function": {
+    "prefix": "unitfn",
+    "body": [
+      "unit function ${1:name} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK unit function template"
+  },
+
+  "unit service": {
+    "prefix": "unitsvc",
+    "body": [
+      "unit service ${1:name} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK unit service template"
+  },
+
+  "system": {
+    "prefix": "system",
+    "body": [
+      "system ${1:name} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK system block"
+  },
+
+  "metadata": {
+    "prefix": "meta",
+    "body": [
+      "metadata ${1:name} {",
+      "    title \"${2:Title}\"",
+      "    description \"${3:Description}\"",
+      "    version \"${4:0.1.0}\"",
+      "    author \"${5:Author}\"",
+      "}"
+    ],
+    "description": "HSK metadata block"
+  },
+
+  "include": {
+    "prefix": "include",
+    "body": [
+      "include \"${1:path}\""
+    ],
+    "description": "HSK include statement"
+  },
+
+  "sequence": {
+    "prefix": "seq",
+    "body": [
+      "sequence ${1:name} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK sequence block"
+  },
+
+  "stage": {
+    "prefix": "stage",
+    "body": [
+      "stage ${1:0} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK stage block"
+  },
+
+  "command block": {
+    "prefix": "cmdblock",
+    "body": [
+      "block command ${1:name} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK command block"
+  },
+
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "function ${1:name}(${2}): ${3:void} {",
+      "    ${4:// code}",
+      "}"
+    ],
+    "description": "HSK function template"
+  },
+
+  "return": {
+    "prefix": "ret",
+    "body": [
+      "return ${1:value}"
+    ],
+    "description": "HSK return statement"
+  },
+
+  "if else": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} {",
+      "    ${2:// code}",
+      "} else {",
+      "    ${3:// code}",
+      "}"
+    ],
+    "description": "HSK if/else template"
+  },
+
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK while template"
+  },
+
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (${1:int i = 0}; ${2:i < 10}; ${3:i = i + 1}) {",
+      "    ${4:// code}",
+      "}"
+    ],
+    "description": "HSK for loop template"
+  },
+
+  "switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:expr} {",
+      "    case ${2:value} {",
+      "        ${3:// code}",
+      "    }",
+      "    default {",
+      "        ${4:// code}",
+      "    }",
+      "}"
+    ],
+    "description": "HSK switch template"
+  },
+
+  "break": {
+    "prefix": "break",
+    "body": [
+      "break"
+    ],
+    "description": "HSK break statement"
+  },
+
+  "continue": {
+    "prefix": "continue",
+    "body": [
+      "continue"
+    ],
+    "description": "HSK continue statement"
+  },
+
+  "in block": {
+    "prefix": "in",
+    "body": [
+      "in ${1:target} {",
+      "    ${2:// code}",
+      "}"
+    ],
+    "description": "HSK in block"
+  },
+
+  "state block": {
+    "prefix": "state",
+    "body": [
+      "block state ${1:name} {",
+      "    ${2:ready}",
+      "    ${3:finished = false}",
+      "    ${4:mode = 0}",
+      "}"
+    ],
+    "description": "HSK state block"
+  },
+
+  "string block": {
+    "prefix": "bstr",
+    "body": [
+      "block string ${1:name} {",
+      "    value \"${2:text}\"",
+      "}"
+    ],
+    "description": "HSK string block"
+  },
+
+  "int block": {
+    "prefix": "bint",
+    "body": [
+      "block int ${1:name} {",
+      "    value ${2:0}",
+      "}"
+    ],
+    "description": "HSK int block"
+  },
+
+  "long block": {
+    "prefix": "blong",
+    "body": [
+      "block long ${1:name} {",
+      "    value ${2:0}",
+      "}"
+    ],
+    "description": "HSK long block"
+  },
+
+  "long_long block": {
+    "prefix": "bll",
+    "body": [
+      "block long_long ${1:name} {",
+      "    value ${2:0}",
+      "}"
+    ],
+    "description": "HSK long_long block"
+  },
+
+  "bool block": {
+    "prefix": "bbool",
+    "body": [
+      "block bool ${1:name} {",
+      "    value ${2:true}",
+      "}"
+    ],
+    "description": "HSK bool block"
+  },
+
+  "bind bool": {
+    "prefix": "bindb",
+    "body": [
+      "bind bool ${1:name} from \"${2:command}\" contains \"${3:text}\""
+    ],
+    "description": "HSK bind bool"
+  },
+
+  "bind int": {
+    "prefix": "bindi",
+    "body": [
+      "bind int ${1:name} from \"${2:command}\" contains \"${3:text}\""
+    ],
+    "description": "HSK bind int"
+  },
+
+  "bind long": {
+    "prefix": "bindl",
+    "body": [
+      "bind long ${1:name} from \"${2:command}\" contains \"${3:text}\""
+    ],
+    "description": "HSK bind long"
+  },
+
+  "bind long_long": {
+    "prefix": "bindll",
+    "body": [
+      "bind long_long ${1:name} from \"${2:command}\" contains \"${3:text}\""
+    ],
+    "description": "HSK bind long_long"
+  },
+
+  "bind string": {
+    "prefix": "binds",
+    "body": [
+      "bind string ${1:name} from \"${2:command}\" contains \"${3:text}\""
+    ],
+    "description": "HSK bind string"
+  },
+
+  "report ok": {
+    "prefix": "rok",
+    "body": [
+      "report ok \"${1:message}\""
+    ],
+    "description": "HSK report ok"
+  },
+
+  "report warn": {
+    "prefix": "rwarn",
+    "body": [
+      "report warn \"${1:message}\""
+    ],
+    "description": "HSK report warn"
+  },
+
+  "report fail": {
+    "prefix": "rfail",
+    "body": [
+      "report fail \"${1:message}\""
+    ],
+    "description": "HSK report fail"
+  },
+
+  "report info": {
+    "prefix": "rinfo",
+    "body": [
+      "report info \"${1:message}\""
+    ],
+    "description": "HSK report info"
+  },
+
+  "inspect shell": {
+    "prefix": "inspect",
+    "body": [
+      "inspect shell ${1:target}"
+    ],
+    "description": "HSK inspect statement"
+  },
+
+  "exec shell": {
+    "prefix": "exec",
+    "body": [
+      "exec shell ${1:target} ${2:action}"
+    ],
+    "description": "HSK exec statement"
+  },
+
+  "shell": {
+    "prefix": "shell",
+    "body": [
+      "shell \"${1:command}\""
+    ],
+    "description": "HSK shell statement"
+  },
+
+  "require root": {
+    "prefix": "reqroot",
+    "body": [
+      "require root"
+    ],
+    "description": "HSK require root"
+  },
+
+  "require privilege": {
+    "prefix": "reqpriv",
+    "body": [
+      "require privilege ${1:name}"
+    ],
+    "description": "HSK require privilege"
+  },
+
+  "bool variable": {
+    "prefix": "vbool",
+    "body": [
+      "bool ${1:name} = ${2:true}"
+    ],
+    "description": "HSK bool variable"
+  },
+
+  "int variable": {
+    "prefix": "vint",
+    "body": [
+      "int ${1:name} = ${2:0}"
+    ],
+    "description": "HSK int variable"
+  },
+
+  "long variable": {
+    "prefix": "vlong",
+    "body": [
+      "long ${1:name} = ${2:0}"
+    ],
+    "description": "HSK long variable"
+  },
+
+  "long_long variable": {
+    "prefix": "vll",
+    "body": [
+      "long_long ${1:name} = ${2:0}"
+    ],
+    "description": "HSK long_long variable"
+  },
+
+  "string variable": {
+    "prefix": "vstr",
+    "body": [
+      "string ${1:name} = \"${2:text}\""
+    ],
+    "description": "HSK string variable"
+  },
+
+  "assignment": {
+    "prefix": "set",
+    "body": [
+      "${1:name} = ${2:value}"
+    ],
+    "description": "HSK assignment"
+  }
+}
