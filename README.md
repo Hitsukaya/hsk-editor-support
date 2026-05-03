@@ -26,3 +26,5 @@ This extension provides basic editor support for HSK in Visual Studio Code.
 ```bash
 git clone https://github.com/Hitsukaya/hsk-vscode
 cd hsk-vscode
+npm install
+npm run compile
