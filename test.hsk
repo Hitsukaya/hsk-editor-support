@@ -1,0 +1,34 @@
+metadata app_info {
+    title "HSK Runtime"
+    description "Infrastructure validation system"
+    version "0.1.0"
+    author "Valentin"
+}
+
+system core {
+
+    unit command test {
+
+        command run {
+
+            bind bool hello_ok from "echo hello" contains "hello"
+
+            if hello_ok {
+                report ok "Bind works"
+            } else {
+                report fail "Bind failed"
+            }
+
+            block state runtime {
+                ready
+                finished = false
+                mode = 2
+            }
+
+            while runtime.ready {
+                report info "Running..."
+                break
+            }
+        }
+    }
+}
