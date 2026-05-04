@@ -2,7 +2,7 @@
   "name": "hsk",
   "displayName": "HSK - (Hitsukaya System Kernel)",
   "description": "HSK is a system-level language designed for runtime control, validation and structured execution.",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "publisher": "hitsukaya",
   "icon": "icon.png", 
   "main": "./out/extension.js",
