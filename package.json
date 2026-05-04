@@ -1,0 +1,73 @@
+{
+  "name": "hsk",
+  "displayName": "HSK - (Hitsukaya System Kernel)",
+  "description": "HSK is a system-level language designed for runtime control, validation and structured execution.",
+  "version": "1.0.2",
+  "publisher": "hitsukaya",
+  "icon": "icon.png", 
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:hsk",
+    "onLanguage:hskon",
+    "onLanguage:hconf"
+  ],
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hsk",
+        "aliases": ["HSK", "hsk"],
+        "extensions": [".hsk"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "hskon",
+        "aliases": ["HSKON", "hskon"],
+        "extensions": [".hskon"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "hconf",
+        "aliases": ["HCONF", "hconf"],
+        "extensions": [".hconf"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hsk",
+        "scopeName": "source.hsk",
+        "path": "./syntaxes/hsk.tmLanguage.json"
+      },
+      {
+        "language": "hskon",
+        "scopeName": "source.hskon",
+        "path": "./syntaxes/hskon.tmLanguage.json"
+      },
+      {
+        "language": "hconf",
+        "scopeName": "source.hconf",
+        "path": "./syntaxes/hconf.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "hsk",
+        "path": "./snippets/hsk.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.110.0",
+    "typescript": "^5.0.0"
+  }
+}
