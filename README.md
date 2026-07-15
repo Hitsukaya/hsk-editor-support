@@ -109,3 +109,13 @@ Hitsukaya
    vsce package
    code --install-extension hsk-language.vsix
    ```
+
+## ⌨️ Nano Editor Support (`.nanorc`)
+
+For system administrators working directly inside UNIX terminals over SSH, we provide native syntax highlighting rules for the **Nano** editor.
+
+### Installation:
+1. Copy the HSK syntax files to your nano user directory:
+   ```bash
+   mkdir -p ~/.nano
+   cp nano/*.nanorc ~/.nano/
