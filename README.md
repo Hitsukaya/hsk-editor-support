@@ -112,7 +112,7 @@ Hitsukaya
 
 Nano editor support
 
-Syntax highlighting for `.hsk`, `.hconf`, and `.hskon` files is available in [`nano/`](nano/README.md).
+Syntax highlighting for `.hsk`, `.hconf`, and `.hskon` files is available in [`nano`].
 
 From the repository root:
 
