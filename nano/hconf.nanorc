@@ -1,0 +1,19 @@
+syntax "hconf" "\.hconf$"
+
+# Identifiers: block names and keys
+color brightcyan "\<[[:alpha:]_][[:alnum:]_]*\>"
+
+# Numbers
+color yellow "\<[0-9]+(\.[0-9]+)?\>"
+
+# Boolean values
+color brightred "\<(true|false)\>"
+
+# Assignment and separators
+color white "[=;]"
+
+# Blocks
+color brightblue "[{}]"
+
+# Strings
+color green "\"([^\"\\]|\\.)*\""

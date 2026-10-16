@@ -1,0 +1,77 @@
+syntax "hsk" "\.hsk$"
+
+# Core structure
+color brightblue "\<(include|metadata|system|unit|command|function|stage|sequence|block|return|value)\>"
+
+# Language extensions
+color magenta "\<(define|enum|struct|class|const|static)\>"
+
+# Access / OOP
+color brightcyan "\<(public|private|protected|this|new)\>"
+
+# Error / utility
+color brightred "\<(throw|try|catch|len|null)\>"
+
+# Types
+color cyan "\<(void|string|int|long|longlong|bool|state|float|double|vector|map)\>"
+
+# Metadata
+color brightyellow "\<(title|description|version|author)\>"
+
+# Runtime
+color green "\<(shell|report|read|require|privilege|in|bind|from|contains|inspect|exec|load|into)\>"
+
+# Control flow
+color brightblue "\<(if|else|while|for|break|continue|switch|case|default)\>"
+
+# Logic
+color brightmagenta "\<(not|and|or)\>"
+
+# Literals
+color brightred "\<(true|false)\>"
+
+# Numbers
+color yellow "\<[0-9]+(\.[0-9]+)?\>"
+
+# KUMO
+color brightcyan "\<(kumo|server)\>"
+
+# Routing
+color brightgreen "\<(route|method|get|post|put|delete|patch|redirect)\>"
+
+# View
+color brightgreen "\<(page|header|footer|section|nav|list|item)\>"
+color brightgreen "\<(text|link|image|script)\>"
+
+# Form
+color brightyellow "\<(form|field|input|button|label|placeholder)\>"
+
+# Style
+color magenta "\<(select|background|color|fontsize|fontweight|fontfamily)\>"
+color magenta "\<(padding|margin|width|height|border|borderradius|layout|gap|align)\>"
+
+# Link / external
+color brightcyan "\<(to|external|target|rel)\>"
+
+# Image / script
+color brightgreen "\<(source|alt|loading|decoding)\>"
+
+# Events
+color yellow "\<(on|click|submit|change)\>"
+
+# State
+color brightmagenta "\<set\>"
+
+# Operators
+color white "[-+*/%=!<>&|]+"
+
+# Symbols
+color white "[][{}(),.;:]"
+
+# Strings
+color green "\"([^\"\\]|\\.)*\""
+
+# Comments
+color cyan "//.*"
+color cyan "#.*"
+color cyan start="/\*" end="\*/"
