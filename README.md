@@ -119,3 +119,10 @@ For system administrators working directly inside UNIX terminals over SSH, we pr
    ```bash
    mkdir -p ~/.nano
    cp nano/*.nanorc ~/.nano/
+Add these lines once to `~/.nanorc`:
+
+```nanorc
+include "~/.config/nano/hsk.nanorc"
+include "~/.config/nano/hconf.nanorc"
+include "~/.config/nano/hskon.nanorc"
+```
